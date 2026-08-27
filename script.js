@@ -52,13 +52,13 @@ function showToast(message) {
 
 /* ===== CALL CLINIC ===== */
 function callClinic() {
-    if (!CLINIC.phone || CLINIC.phone === "9389148342") {
+    if (!CLINIC.phone || CLINIC.phone === "") {
         showToast("Clinic phone number will be added soon.");
         return;
     }
-    window.location.href = 'tel:' + CLINIC.phone;
-}
 
+    window.location.href = 'tel:+91' + CLINIC.phone;
+}
 /* ===== GOOGLE MAPS ===== */
 function getDirections() {
     if (!CLINIC.googleMaps || CLINIC.googleMaps === "") {https://www.google.com/maps/place/Aadya+Clinic/@30.2838355,78.0395574,17z/data=!3m1!4b1!4m6!3m5!1s0x390929b9e0a78301:0xb882c0504a2b6ed!8m2!3d30.2838355!4d78.0395574!16s%2Fg%2F11pfbfgjjp?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D
