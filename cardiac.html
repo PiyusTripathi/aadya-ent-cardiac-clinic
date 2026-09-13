@@ -111,6 +111,173 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 
+
+<style>
+/* Cardiologist profile section */
+.cardiac-doctor-section {
+    padding-top: 54px;
+    padding-bottom: 72px;
+}
+
+.cardiac-doctor-card {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.45fr);
+    gap: 42px;
+    align-items: stretch;
+    background: var(--color-white);
+    border: 1px solid #e8edf4;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.cardiac-doctor-photo {
+    min-height: 620px;
+    background: var(--color-light-bg);
+    overflow: hidden;
+}
+
+.cardiac-doctor-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.cardiac-doctor-content {
+    padding: 44px 42px 40px 0;
+}
+
+.cardiac-doctor-content h2 {
+    margin: 6px 0 2px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+}
+
+.cardiac-doctor-role {
+    margin: 0 0 18px;
+    color: var(--color-cardiac-red);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cardiac-qualifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.cardiac-qualifications span {
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #edf7ff;
+    color: var(--color-deep-blue);
+    border: 1px solid #d8eaf8;
+    font-size: .82rem;
+    font-weight: 600;
+}
+
+.cardiac-doctor-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.cardiac-doctor-columns > div {
+    padding: 20px;
+    border-radius: 18px;
+    background: #f7fafc;
+    border: 1px solid #e5edf5;
+}
+
+.cardiac-doctor-columns h3 {
+    margin: 0 0 13px;
+    color: var(--color-deep-blue);
+    font-size: 1rem;
+}
+
+.cardiac-doctor-columns ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cardiac-doctor-columns li {
+    position: relative;
+    padding: 7px 0 7px 22px;
+    color: #5b6472;
+    font-size: .88rem;
+    line-height: 1.45;
+    border-bottom: 1px dashed #dbe4ec;
+}
+
+.cardiac-doctor-columns li:last-child {
+    border-bottom: 0;
+}
+
+.cardiac-doctor-columns li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    color: #1688cf;
+    font-weight: 800;
+}
+
+.cardiac-doctor-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+@media (max-width: 900px) {
+    .cardiac-doctor-card {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .cardiac-doctor-photo {
+        min-height: 500px;
+        max-height: 650px;
+    }
+
+    .cardiac-doctor-content {
+        padding: 34px 28px 32px;
+    }
+}
+
+@media (max-width: 620px) {
+    .cardiac-doctor-section {
+        padding-top: 38px;
+        padding-bottom: 54px;
+    }
+
+    .cardiac-doctor-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .cardiac-doctor-photo {
+        min-height: 430px;
+        max-height: 560px;
+    }
+
+    .cardiac-doctor-content {
+        padding: 28px 20px;
+    }
+
+    .cardiac-doctor-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+
 </head>
 <body>
 
@@ -158,21 +325,70 @@
             </div>
         </section>
 
-        <section class="section" aria-label="Cardiac department overview">
+        
+        <!-- Cardiologist profile -->
+        <section class="section cardiac-doctor-section" aria-label="Cardiologist profile">
             <div class="container">
-                <div class="gallery-grid">
-                    <div class="department-card-media reveal" style="border-radius: var(--radius-lg); overflow: hidden;">
-                        <img src="https://imgs.search.brave.com/uPNbb_HSlSU-x-3hB2FJbMaowEZSRcAsSOfwi9euVk0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMTEv/NjM0LzUyOC9zbWFs/bC9jYXJkaW9sb2d5/LWNsaW5pYy1ob3Nw/aXRhbC1kZXBhcnRt/ZW50LWhlYWx0aHkt/aGVhcnQtY2FyZGlv/dmFzY3VsYXItcHJl/dmVudGlvbi1oZWFs/dGhjYXJlLWluZHVz/dHJ5LWlkZWEtZGVz/aWduLWVsZW1lbnQt/ZWxlY3Ryb2NhcmRp/b2dyYW0tZWtnLWZs/YXQtbW9kZXJuLWls/bHVzdHJhdGlvbi12/ZWN0b3IuanBn" alt="Cardiac care at AADYA ENT & CARDIAC CLINIC" loading="lazy">
-                        <div class="img-placeholder" style="display:none">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>ADD CARDIAC IMAGE</span>
+                <div class="cardiac-doctor-card reveal">
+                    <div class="cardiac-doctor-photo">
+                        <img src="https://res.cloudinary.com/duwuxycn1/image/upload/v1786777002/_ETS9794.JPG_h2lo14.jpg"
+                             alt="Dr. C.M. Belwal, Consultant Cardiologist"
+                             loading="lazy">
+                    </div>
+
+                    <div class="cardiac-doctor-content">
+                        <span class="section-eyebrow">Meet Our Cardiologist</span>
+                        <h2>Dr. C.M. Belwal</h2>
+                        <p class="cardiac-doctor-role">Consultant Cardiologist</p>
+
+                        <div class="cardiac-qualifications">
+                            <span>MBBS</span>
+                            <span>M.D. (Medicine)</span>
+                            <span>D.M. (Cardiology)</span>
+                            <span>DNB (Cardiology)</span>
+                        </div>
+
+                        <div class="cardiac-doctor-columns">
+                            <div>
+                                <h3>Cardiac Care &amp; Services</h3>
+                                <ul>
+                                    <li>Comprehensive Cardiac Consultation</li>
+                                    <li>Heart Disease Evaluation</li>
+                                    <li>Blood Pressure Management</li>
+                                    <li>Chest Pain &amp; Heart Attack Evaluation</li>
+                                    <li>ECG &amp; Cardiac Assessment</li>
+                                    <li>Heart Failure Management</li>
+                                    <li>Rhythm &amp; Palpitation Disorders</li>
+                                    <li>Preventive Cardiology</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3>Cardiac Services</h3>
+                                <ul>
+                                    <li>ECG</li>
+                                    <li>2D Echo</li>
+                                    <li>TMT</li>
+                                    <li>Holter Monitoring</li>
+                                    <li>Hypertension Management</li>
+                                    <li>Diabetes &amp; Heart Care</li>
+                                    <li>Coronary Artery Disease Management</li>
+                                    <li>Heart Failure Care</li>
+                                    <li>Cardiac Risk Assessment</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="cardiac-doctor-actions">
+                            <a class="btn btn-primary" href="#cardiac-services">View Cardiac Services</a>
+                            <button class="btn btn-red" onclick="callClinic()">Call Clinic</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-alt" aria-label="Cardiac services">
+        <section class="section section-alt" id="cardiac-services" aria-label="Cardiac services">
             <div class="container">
                 <div class="section-head reveal">
                     <span class="section-eyebrow">Cardiac Services</span>
