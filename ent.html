@@ -48,6 +48,52 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        .doctor-highlight-section { padding: 56px 0 64px; }
+        .doctor-highlight {
+            display: grid;
+            grid-template-columns: minmax(280px, .82fr) minmax(0, 1.35fr);
+            gap: 34px;
+            background: var(--color-white);
+            border: 1px solid #e8edf4;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .doctor-highlight-image { min-height: 480px; background: var(--color-light-bg); }
+        .doctor-highlight-image img { width: 100%; height: 100%; display: block; object-fit: cover; }
+        .doctor-highlight-content { padding: 34px 36px 34px 4px; }
+        .doctor-highlight-role {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-cardiac-red);
+            margin-bottom: 6px;
+        }
+        .doctor-highlight-content h3 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.25rem); }
+        .doctor-highlight-qualification { margin: 5px 0 14px; color: var(--color-deep-blue); font-weight: 600; }
+        .doctor-highlight-content > p:not(.doctor-highlight-qualification) { color: #5b6472; max-width: 650px; }
+        .doctor-highlight-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 22px; }
+        .doctor-highlight-lists h4 { margin: 0 0 10px; color: var(--color-deep-blue); font-size: .98rem; }
+        .doctor-highlight-lists ul { margin: 0; padding: 0; list-style: none; }
+        .doctor-highlight-lists li { position: relative; padding: 6px 0 6px 20px; color: #5b6472; font-size: .88rem; line-height: 1.4; }
+        .doctor-highlight-lists li::before { content: "✓"; position: absolute; left: 0; color: var(--color-cardiac-red); font-weight: 700; }
+        .doctor-highlight-actions { display: flex; align-items: center; gap: 18px; margin-top: 24px; }
+        .doctor-highlight-link { color: var(--color-deep-blue); font-weight: 600; text-decoration: none; }
+        .doctor-highlight-link:hover { color: var(--color-cardiac-red); }
+        @media (max-width: 800px) {
+            .doctor-highlight { grid-template-columns: 1fr; }
+            .doctor-highlight-image { min-height: 360px; max-height: 480px; }
+            .doctor-highlight-content { padding: 28px; }
+        }
+        @media (max-width: 560px) {
+            .doctor-highlight-lists { grid-template-columns: 1fr; gap: 18px; }
+            .doctor-highlight-actions { align-items: stretch; flex-direction: column; }
+        }
+    </style>
 </head>
 <body>
 
@@ -95,21 +141,59 @@
             </div>
         </section>
 
-        <section class="section" aria-label="ENT department overview">
+
+        <section class="section doctor-highlight-section" aria-label="ENT specialist">
             <div class="container">
-                <div class="gallery-grid">
-                    <div class="department-card-media reveal" style="border-radius: var(--radius-lg); overflow: hidden;">
-                        <img src="https://imgs.search.brave.com/xuvBvpsCj8GTQCjQIgJ14Bw0S1Opdlh3gShebfrE-40/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ0/NTE2NzgyOC92ZWN0/b3IvaHVtYW4tZWFy/LW90b2xhcnluZ29s/b2dpc3QuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPThfekdh/UDR5Y1NybmxPQVdy/NXFGdHB1NG5jMVAy/c2JNZmRrbEh5NnJO/UTA9" alt="ENT clinic and equipment at AADYA ENT & CARDIAC CLINIC" loading="lazy">
-                        <div class="img-placeholder" style="display:none">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                            <span>ADD ENT CLINIC / EQUIPMENT IMAGE</span>
+                <div class="section-head reveal">
+                    <span class="section-eyebrow">Meet Our ENT Specialist</span>
+                    <h2 class="section-title">Dr. N.K. Belwal</h2>
+                    <p class="section-subtitle">MBBS, MS (ENT) · ENT Surgeon</p>
+                </div>
+
+                <div class="doctor-highlight reveal">
+                    <div class="doctor-highlight-image">
+                        <img src="https://res.cloudinary.com/duwuxycn1/image/upload/v1787342260/_ETS0733_kkg7vv.jpg" alt="Dr. N.K. Belwal, ENT Surgeon" loading="lazy">
+                    </div>
+
+                    <div class="doctor-highlight-content">
+                        <span class="doctor-highlight-role">ENT Specialist</span>
+                        <h3>Dr. N.K. Belwal</h3>
+                        <p class="doctor-highlight-qualification">MBBS, MS (ENT)</p>
+                        <p>Specialist-led ENT care with experience in comprehensive consultation, evaluation and surgical treatment.</p>
+
+                        <div class="doctor-highlight-lists">
+                            <div>
+                                <h4>ENT Care &amp; Services</h4>
+                                <ul>
+                                    <li>Comprehensive ENT Consultation</li>
+                                    <li>Ear, Nose &amp; Throat Evaluation</li>
+                                    <li>Endoscopic ENT Evaluation</li>
+                                    <li>Hearing &amp; Tinnitus Assessment</li>
+                                    <li>Vertigo &amp; Balance Disorders</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Surgical Services</h4>
+                                <ul>
+                                    <li>Microscopic Ear Surgery</li>
+                                    <li>Endoscopic Sinus &amp; Nasal Surgery</li>
+                                    <li>Throat &amp; Laryngeal Surgery</li>
+                                    <li>Labuloplasty</li>
+                                    <li>Hearing Assessment &amp; Hearing Aid Support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="doctor-highlight-actions">
+                            <a href="tel:9389148342" class="btn btn-red">Call Clinic</a>
+                            <a href="#ent-services" class="doctor-highlight-link">View ENT Services</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section section-alt" aria-label="ENT services">
+        <section class="section section-alt" id="ent-services" aria-label="ENT services">
             <div class="container">
                 <div class="section-head reveal">
                     <span class="section-eyebrow">ENT Services</span>
