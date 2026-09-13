@@ -944,7 +944,8 @@ h4 { font-size: 1.05rem; }
     box-shadow: var(--shadow-sm);
     overflow: hidden;
     text-align: center;
-    transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+    transition: transform var(--transition-slow), 
+                box-shadow var(--transition-slow);
 }
 
 .doctor-card:hover {
@@ -985,6 +986,29 @@ h4 { font-size: 1.05rem; }
 .doctor-info p {
     font-size: 0.9rem;
     color: #5b6472;
+}
+
+
+/* Department Page Buttons */
+
+.doctor-page-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: var(--color-deep-blue);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.doctor-page-btn:hover {
+    background: var(--color-cardiac-red);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* ===== WHY CHOOSE US ===== */
