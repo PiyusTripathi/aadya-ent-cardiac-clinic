@@ -8,7 +8,7 @@ const Center = {
     name: "AADYA ENT & CARDIAC Center",
     phone: "9389148342",
     whatsapp: "",
-    email: "ADD_EMAIL",
+    email: "aadhyaclinic1@gmail.com",
     address: "Mothorowala Rd, Bengali Kothi, Tehri Nagar, Dehradun, Uttarakhand, India",
     timings: "ADD_Center_TIMINGS",
     googleMaps: "https://maps.app.goo.gl/fVJf5kMqRvjPF76bA"
