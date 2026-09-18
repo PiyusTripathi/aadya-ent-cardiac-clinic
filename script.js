@@ -1,20 +1,20 @@
 /* ============================================================
-   AADYA ENT & CARDIAC CLINIC - Shared Script
+   AADYA ENT & CARDIAC Center - Shared Script
    Pages: index.html, ent.html, cardiac.html, media.html
    ============================================================ */
 
-/* ===== CLINIC CONFIGURATION ===== */
-const CLINIC = {
-    name: "AADYA ENT & CARDIAC CLINIC",
+/* ===== Center CONFIGURATION ===== */
+const Center = {
+    name: "AADYA ENT & CARDIAC Center",
     phone: "9389148342",
     whatsapp: "",
     email: "ADD_EMAIL",
     address: "Mothorowala Rd, Bengali Kothi, Tehri Nagar, Dehradun, Uttarakhand, India",
-    timings: "ADD_CLINIC_TIMINGS",
+    timings: "ADD_Center_TIMINGS",
     googleMaps: "https://maps.app.goo.gl/fVJf5kMqRvjPF76bA"
 };
 
-const HAS_WHATSAPP = !!CLINIC.whatsapp && CLINIC.whatsapp !== "";
+const HAS_WHATSAPP = !!Center.whatsapp && Center.whatsapp !== "";
 
 /* ===== DOM ELEMENTS ===== */
 const nav = document.getElementById('siteNav');
@@ -50,22 +50,22 @@ function showToast(message) {
     }, 3200);
 }
 
-/* ===== CALL CLINIC ===== */
-function callClinic() {
-    if (!CLINIC.phone || CLINIC.phone === "") {
-        showToast("Clinic phone number will be added soon.");
+/* ===== CALL Center ===== */
+function callCenter() {
+    if (!Center.phone || Center.phone === "") {
+        showToast("Center phone number will be added soon.");
         return;
     }
 
-    window.location.href = 'tel:+91' + CLINIC.phone;
+    window.location.href = 'tel:+91' + Center.phone;
 }
 /* ===== GOOGLE MAPS ===== */
 function getDirections() {
-    if (!CLINIC.googleMaps || CLINIC.googleMaps === "") {https://www.google.com/maps/place/Aadya+Clinic/@30.2838355,78.0395574,17z/data=!3m1!4b1!4m6!3m5!1s0x390929b9e0a78301:0xb882c0504a2b6ed!8m2!3d30.2838355!4d78.0395574!16s%2Fg%2F11pfbfgjjp?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D
+    if (!Center.googleMaps || Center.googleMaps === "") {https://www.google.com/maps/place/Aadya+Center/@30.2838355,78.0395574,17z/data=!3m1!4b1!4m6!3m5!1s0x390929b9e0a78301:0xb882c0504a2b6ed!8m2!3d30.2838355!4d78.0395574!16s%2Fg%2F11pfbfgjjp?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D
         showToast("Google Maps link will be added soon.");
         return;
     }
-    window.open(CLINIC.googleMaps, '_blank');
+    window.open(Center.googleMaps, '_blank');
 }
 
 /* ===== MOBILE MENU ===== */
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* ===== LIGHTBOX (clinic gallery, camps gallery) ===== */
+/* ===== LIGHTBOX (Center gallery, camps gallery) ===== */
 const lightboxItems = [];
 
 function initLightbox() {
@@ -528,9 +528,9 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ===== PUBLIC API ===== */
-window.AadyaClinic = {
-    CLINIC,
-    callClinic,
+window.AadyaCenter = {
+    Center,
+    callCenter,
     openWhatsAppAppointment,
     getDirections,
     openLightbox,

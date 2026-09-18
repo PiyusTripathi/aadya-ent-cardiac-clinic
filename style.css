@@ -1,6 +1,6 @@
 /* ============================================================
-   AADYA ENT & CARDIAC CLINIC - Premium Multi-page Website
-   ENT & Cardiology Clinic in Dehradun, Uttarakhand
+   AADYA ENT & CARDIAC Center - Premium Multi-page Website
+   ENT & Cardiology Center in Dehradun, Uttarakhand
    Pages: index.html, ent.html, cardiac.html, media.html
    ============================================================ */
 
@@ -525,7 +525,7 @@ h4 { font-size: 1.05rem; }
     flex-shrink: 0;
 }
 
-/* Right column — clinic image + floating specialist card */
+/* Right column — Center image + floating specialist card */
 
 .hero-media {
     position: relative;
@@ -1053,7 +1053,7 @@ h4 { font-size: 1.05rem; }
     font-size: 0.95rem;
 }
 
-/* ===== HOME CLINIC GALLERY ===== */
+/* ===== HOME Center GALLERY ===== */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1996,7 +1996,7 @@ h4 { font-size: 1.05rem; }
 }
 
 /* ============================================================
-   FINAL POLISH PATCH — AADYA CLINIC
+   FINAL POLISH PATCH — AADYA Center
    Fixes the hero/container regression from the previous build.
    ============================================================ */
 

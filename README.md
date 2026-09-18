@@ -1,6 +1,6 @@
-# AADYA ENT & CARDIAC CLINIC Website
+# AADYA ENT & CARDIAC Center Website
 
-A premium multi-page healthcare website for **AADYA ENT & CARDIAC CLINIC** — a real ENT & Cardiology clinic located in Dehradun, Uttarakhand, India.
+A premium multi-page healthcare website for **AADYA ENT & CARDIAC Center** — a real ENT & Cardiology Center located in Dehradun, Uttarakhand, India.
 
 ## Overview
 
@@ -10,7 +10,7 @@ Built using **HTML5**, **CSS3**, and **Vanilla JavaScript** — no frameworks, n
 
 | Page | File | Description |
 |------|------|-------------|
-| Home | `index.html` | Hero, About, Departments, Doctors, Why Choose Us, Clinic gallery, reel, contact |
+| Home | `index.html` | Hero, About, Departments, Doctors, Why Choose Us, Center gallery, reel, contact |
 | ENT | `ent.html` | ENT hero, services (Nasal Endoscopy, Audiometry, Sinus & Throat Care, Microsurgery), gallery, CTA |
 | Cardiac | `cardiac.html` | Cardiac hero, services (Heart Health Checks, ECG, Hypertension Management, Cardiac Management), equipment grid, CTA |
 | Media | `media.html` | Health camps gallery (lightbox) and doctor reels (9:16 cards) |
@@ -20,11 +20,11 @@ All pages share `style.css` and `script.js`, with a consistent sticky header and
 ## Features
 
 - **Premium healthcare design** — professional, clean, modern, and trustworthy
-- **Fully responsive** — single-line desktop navigation, hamburger mobile menu, mobile bottom bar (Call Clinic + WhatsApp)
-- **Call Clinic first** — every primary CTA dials the clinic via `tel:`; QR
+- **Fully responsive** — single-line desktop navigation, hamburger mobile menu, mobile bottom bar (Call Center + WhatsApp)
+- **Call Center first** — every primary CTA dials the Center via `tel:`; QR
 - **WhatsApp secondary** — shown only when an official number is configured
 - **Accessibility-first** — semantic HTML, keyboard navigation, ARIA labels, `prefers-reduced-motion`
-- **SEO optimized** — per-page titles/meta, Open Graph, MedicalClinic structured data
+- **SEO optimized** — per-page titles/meta, Open Graph, MedicalCenter structured data
 - **Image fallback system** — polished placeholders instead of broken image icons
 - **Gallery lightbox** — full-screen image viewer with prev/next, keyboard support, per-page groups
 - **Reel modal** — local MP4 playback plus Instagram/YouTube link support
@@ -33,35 +33,35 @@ All pages share `style.css` and `script.js`, with a consistent sticky header and
 
 ## Central Configuration
 
-All clinic details are defined in `script.js` as a central configuration object:
+All Center details are defined in `script.js` as a central configuration object:
 
 ```javascript
-const CLINIC = {
-    name: "AADYA ENT & CARDIAC CLINIC",
+const Center = {
+    name: "AADYA ENT & CARDIAC Center",
     phone: "ADD_PHONE_NUMBER",
     whatsapp: "",               // add digits only (no +) to enable WhatsApp
     email: "ADD_EMAIL",
     address: "Mothorowala Rd, Bengali Kothi, Tehri Nagar, Dehradun, Uttarakhand, India",
-    timings: "ADD_CLINIC_TIMINGS",
+    timings: "ADD_Center_TIMINGS",
     googleMaps: "ADD_GOOGLE_MAPS_LINK"
 };
 ```
 
-While the phone is `"ADD_PHONE_NUMBER"`, clicking any Call Clinic button shows a toast: "Clinic phone number will be added soon." Until a WhatsApp number is added, the WhatsApp button is hidden.
+While the phone is `"ADD_PHONE_NUMBER"`, clicking any Call Center button shows a toast: "Center phone number will be added soon." Until a WhatsApp number is added, the WhatsApp button is hidden.
 
 ## Placeholder Guide
 
 | Placeholder | Location | Replace With |
 |-------------|----------|--------------|
-| `ADD_PHONE_NUMBER` | Header CTA, contact, footer, `CLINIC.phone` | Actual clinic phone number |
-| `whatsapp` (empty) | `script.js` `CLINIC.whatsapp` | Official WhatsApp number (digits only, no +) |
-| `ADD_EMAIL` | Contact, footer, `CLINIC.email` | Clinic email address |
-| `ADD_CLINIC_TIMINGS` | `CLINIC.timings` | "Mon-Sat: 9:00 AM - 6:00 PM" |
-| `ADD_GOOGLE_MAPS_LINK` | `CLINIC.googleMaps` | Google Maps URL |
-| `ADD CLINIC / HOSPITAL IMAGE` | Hero fallback | `assets/clinic/hero.jpg` |
-| Hero clinic image | Hero right column + floating card | `assets/clinic/hero.jpg` (until provided, the `ADD CLINIC / HOSPITAL IMAGE` placeholder shows) |
-| `ADD CLINIC IMAGE` | About, gallery | `assets/clinic/about.jpg`, exterior/reception/waiting-area/consultation-room |
-| `ADD ENT CLINIC / EQUIPMENT IMAGE` | ENT hero | `assets/ent/ent-main.jpg` |
+| `ADD_PHONE_NUMBER` | Header CTA, contact, footer, `Center.phone` | Actual Center phone number |
+| `whatsapp` (empty) | `script.js` `Center.whatsapp` | Official WhatsApp number (digits only, no +) |
+| `ADD_EMAIL` | Contact, footer, `Center.email` | Center email address |
+| `ADD_Center_TIMINGS` | `Center.timings` | "Mon-Sat: 9:00 AM - 6:00 PM" |
+| `ADD_GOOGLE_MAPS_LINK` | `Center.googleMaps` | Google Maps URL |
+| `ADD Center / HOSPITAL IMAGE` | Hero fallback | `assets/Center/hero.jpg` |
+| Hero Center image | Hero right column + floating card | `assets/Center/hero.jpg` (until provided, the `ADD Center / HOSPITAL IMAGE` placeholder shows) |
+| `ADD Center IMAGE` | About, gallery | `assets/Center/about.jpg`, exterior/reception/waiting-area/consultation-room |
+| `ADD ENT Center / EQUIPMENT IMAGE` | ENT hero | `assets/ent/ent-main.jpg` |
 | `ADD ENT IMAGE`, `ADD ENT EQUIPMENT IMAGE`, `ADD ENT PROCEDURE IMAGE`, `ADD ENT ROOM IMAGE` | ENT gallery | `assets/ent/` gallery images |
 | `ADD CARDIAC IMAGE` | Cardiac hero | `assets/cardiac/cardiac-main.jpg` |
 | `ADD ECG MACHINE IMAGE`, `ADD CARDIAC EQUIPMENT IMAGE`, `ADD DIAGNOSTIC MACHINE IMAGE`, `ADD MONITORING EQUIPMENT IMAGE` | Cardiac equipment | `assets/cardiac/` images |
@@ -84,7 +84,7 @@ While the phone is `"ADD_PHONE_NUMBER"`, clicking any Call Clinic button shows a
 ├── script.js
 ├── assets/
 │   ├── logo/
-│   ├── clinic/            hero, about, exterior, reception, waiting-area, consultation-room
+│   ├── Center/            hero, about, exterior, reception, waiting-area, consultation-room
 │   ├── doctors/           dr-nk-belwal.jpg, chandra-mohan-belwal.jpg
 │   ├── ent/               ent-main.jpg + 4 gallery images
 │   ├── cardiac/           cardiac-main.jpg, ecg.jpg, machine-1.jpg, machine-2.jpg, equipment.jpg
@@ -98,7 +98,7 @@ While the phone is `"ADD_PHONE_NUMBER"`, clicking any Call Clinic button shows a
 
 1. Mobile hamburger menu toggle
 2. Active navigation (per-page + homepage scroll-spy)
-3. `callClinic()` with placeholder guard and toast
+3. `callCenter()` with placeholder guard and toast
 4. WhatsApp booking (secondary, hidden without a number)
 5. Generic lightbox with prev/next and keyboard support
 6. Reel modal for local MP4 + Instagram/YouTube external links
@@ -135,4 +135,4 @@ This is a real medical website. No phone numbers, WhatsApp numbers, medical qual
 
 ## License
 
-© 2026 AADYA ENT & CARDIAC CLINIC. All Rights Reserved.
+© 2026 AADYA ENT & CARDIAC Center. All Rights Reserved.
