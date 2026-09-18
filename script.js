@@ -1,6 +1,7 @@
 /* ============================================================
    AADYA ENT & CARDIAC Center - Shared Script
    Pages: index.html, ent.html, cardiac.html, media.html
+   This websit is build by Piyush Tripathi
    ============================================================ */
 
 /* ===== Center CONFIGURATION ===== */
