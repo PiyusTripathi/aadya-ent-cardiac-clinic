@@ -52,7 +52,7 @@ function showToast(message) {
 }
 
 /* ===== CALL Center ===== */
-function callCenter() {
+function call() {
     if (!Center.phone || Center.phone === "") {
         showToast("Center phone number will be added soon.");
         return;
