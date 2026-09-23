@@ -171,15 +171,15 @@ function handleImageError(img) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('img').forEach(img => {
-        const current = img.getAttribute('src') || '';
-        if (!current || current.startsWith('ADD_')) {
-            handleImageError(img);
-            return;
-        }
-        img.addEventListener('error', () => handleImageError(img));
-    });
+document.querySelectorAll('img:not(#appLightboxImg)').forEach(img => {
+    const current = img.getAttribute('src') || '';
+
+    if (!current || current.startsWith('ADD_')) {
+        handleImageError(img);
+        return;
+    }
+
+    img.addEventListener('error', () => handleImageError(img));
 });
 
 /* ===== VIDEO FALLBACK ===== */
@@ -234,10 +234,14 @@ function openLightbox(index) {
 
 function renderLightbox() {
     const item = lightboxItems[currentLightboxIndex];
+
     if (!item) return;
+
+    lightboxImg.style.display = 'block';
     lightboxImg.src = item.src;
     lightboxImg.alt = item.title;
     lightboxCaption.textContent = item.title;
+
     lightboxImg.onerror = () => handleImageError(lightboxImg);
 }
 
