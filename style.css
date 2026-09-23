@@ -2215,16 +2215,13 @@ h4 { font-size: 1.05rem; }
 }
 
 @media (max-width: 760px) {
+
     .header-inner {
         gap: 10px;
     }
 
     .brand-name {
         font-size: .98rem;
-    }
-
-    .nav {
-        display: none;
     }
 
     .header-cta {
