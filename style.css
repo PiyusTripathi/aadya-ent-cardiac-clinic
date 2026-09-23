@@ -2166,6 +2166,7 @@ h4 { font-size: 1.05rem; }
 }
 
 @media (max-width: 1180px) and (min-width: 991px) {
+
     .hero-grid {
         width: min(1080px, calc(100% - 40px));
         gap: 38px;
@@ -2183,9 +2184,11 @@ h4 { font-size: 1.05rem; }
     .brand-name {
         font-size: 1.05rem;
     }
+
 }
 
 @media (max-width: 990px) {
+
     .hero {
         max-height: none;
         min-height: auto;
@@ -2212,6 +2215,7 @@ h4 { font-size: 1.05rem; }
         left: 18px;
         bottom: 20px;
     }
+
 }
 
 @media (max-width: 760px) {
@@ -2249,9 +2253,11 @@ h4 { font-size: 1.05rem; }
         font-size: .78rem;
         padding: 7px 10px;
     }
+
 }
 
 @media (max-width: 520px) {
+
     .container {
         width: min(100% - 28px, 560px);
     }
@@ -2295,4 +2301,5 @@ h4 { font-size: 1.05rem; }
     .reel-carousel {
         grid-auto-columns: 78%;
     }
+
 }
