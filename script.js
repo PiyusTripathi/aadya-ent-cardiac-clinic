@@ -383,9 +383,20 @@ function initReelCarousel() {
     }
 
     function next() {
-        goTo((current + 1) % cards.length);
+
+    const rect = carousel.getBoundingClientRect();
+
+    // Reel section screen par visible nahi hai
+    if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
+        if (timer) {
+            clearInterval(timer);
+            timer = null;
+        }
+        return;
     }
 
+    goTo((current + 1) % cards.length);
+}
     function restart() {
         if (timer) clearInterval(timer);
         if (!reduceMotion) timer = setInterval(next, AUTO_INTERVAL);
@@ -413,15 +424,35 @@ function initReelCarousel() {
     }
 
     if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) restart();
-            });
-        }, { threshold: 0.2 });
-        io.observe(carousel);
-    } else {
-        restart();
-    }
+
+    const io = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                // Reel section visible → autoplay ON
+                restart();
+
+            } else {
+
+                // Reel section screen se bahar → autoplay temporarily pause
+                if (timer) {
+                    clearInterval(timer);
+                    timer = null;
+                }
+
+            }
+
+        });
+
+    }, { threshold: 0.2 });
+
+    io.observe(carousel);
+
+} else {
+    restart();
+}
 }
 
 /* ===== HERO BACKGROUND VIDEO ===== */
