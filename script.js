@@ -382,19 +382,7 @@ function initReelCarousel() {
         }
     }
 
-    function next() {
-
-    const rect = carousel.getBoundingClientRect();
-
-    // Reel section screen par visible nahi hai
-    if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
-        if (timer) {
-            clearInterval(timer);
-            timer = null;
-        }
-        return;
-    }
-
+function next() {
     goTo((current + 1) % cards.length);
 }
     function restart() {
@@ -423,33 +411,14 @@ function initReelCarousel() {
         });
     }
 
-    if ('IntersectionObserver' in window) {
-
+   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
-
         entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-                // Reel section visible → autoplay ON
-                restart();
-
-            } else {
-
-                // Reel section screen se bahar → autoplay temporarily pause
-                if (timer) {
-                    clearInterval(timer);
-                    timer = null;
-                }
-
-            }
-
+            if (entry.isIntersecting) restart();
         });
-
     }, { threshold: 0.2 });
 
     io.observe(carousel);
-
 } else {
     restart();
 }
