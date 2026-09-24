@@ -1,8 +1,5 @@
-/* ============================================================
-   AADYA ENT & CARDIAC Center - Premium Multi-page Website
-   ENT & Cardiology Center in Dehradun, Uttarakhand
-   Pages: index.html, ent.html, cardiac.html, media.html
-   ============================================================ */
+/* 
+   AADYA ENT & CARDIAC Center  */
 
 /* ===== ROOT / CSS VARIABLES ===== */
 :root {
@@ -1241,27 +1238,43 @@ h4 { font-size: 1.05rem; }
     }
 }
 
-@media (max-width: 640px) {
+/* ===== MOBILE HOME REELS ===== */
+@media (max-width: 760px) {
     .reel-carousel {
+        display: grid;
+        grid-template-columns: none;
         grid-auto-flow: column;
-        grid-auto-columns: 76%;
-        grid-template-columns: 1fr;
+        grid-auto-columns: 86%;
+        width: auto;
         overflow-x: auto;
+        overflow-y: hidden;
+        gap: 16px;
+        margin-inline: -14px;
+        padding: 8px 14px 12px;
         scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
         scrollbar-width: none;
-        gap: 14px;
-        margin-inline: -24px;
-        padding: 4px 24px;
+        -webkit-overflow-scrolling: touch;
     }
-    .reel-carousel::-webkit-scrollbar {
-        display: none;
-    }
+    .reel-carousel::-webkit-scrollbar { display: none; }
     .reel-carousel .reel-card {
+        width: 100%;
+        min-width: 0;
+        aspect-ratio: 9 / 16;
         scroll-snap-align: center;
+        scroll-snap-stop: always;
+        border-radius: 22px;
+        transform: none;
     }
-    .reel-dots {
-        margin-top: 22px;
+    .reel-carousel .reel-card.is-active { transform: translateY(-4px); }
+    .reel-carousel .reel-card iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
     }
+    .reel-dots { margin-top: 20px; gap: 9px; }
+    .reel-dot { width: 9px; height: 9px; }
+    .reel-actions { margin-top: 28px; }
 }
 
 .reel-actions {
@@ -2304,73 +2317,4 @@ h4 { font-size: 1.05rem; }
 
         max-width: calc(100% - 28px);
     }
-    @media (max-width: 640px) {
-
-    .reel-carousel {
-        display: grid;
-
-        /* IMPORTANT: remove desktop 4-column layout */
-        grid-template-columns: none;
-
-        /* One large reel at a time */
-        grid-auto-flow: column;
-        grid-auto-columns: 86%;
-
-        width: auto;
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        gap: 16px;
-
-        margin-inline: -14px;
-        padding: 8px 14px 12px;
-
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-
-        scrollbar-width: none;
-    }
-
-    .reel-carousel::-webkit-scrollbar {
-        display: none;
-    }
-
-    .reel-carousel .reel-card {
-        width: 100%;
-        min-width: 0;
-
-        aspect-ratio: 9 / 16;
-
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-
-        border-radius: 22px;
-
-        transform: none;
-    }
-
-    .reel-carousel .reel-card.is-active {
-        transform: translateY(-4px);
-    }
-
-    .reel-card iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-
-    .reel-dots {
-        margin-top: 20px;
-        gap: 9px;
-    }
-
-    .reel-dot {
-        width: 9px;
-        height: 9px;
-    }
-
-    .reel-actions {
-        margin-top: 28px;
-    }
-}
 }
