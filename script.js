@@ -341,7 +341,6 @@ function initReelCarousel() {
     const cards = Array.from(carousel.querySelectorAll('.reel-card'));
     if (cards.length < 2) return;
 
-    const AUTO_INTERVAL = 4200;
     const mobileQuery = window.matchMedia('(max-width: 640px)');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const dots = [];
@@ -386,9 +385,11 @@ function next() {
     goTo((current + 1) % cards.length);
 }
     function restart() {
-        if (timer) clearInterval(timer);
-        if (!reduceMotion) timer = setInterval(next, AUTO_INTERVAL);
+    if (timer) {
+        clearInterval(timer);
+        timer = null;
     }
+}
 
     if (mobileQuery.matches) {
         carousel.addEventListener('scroll', () => {
