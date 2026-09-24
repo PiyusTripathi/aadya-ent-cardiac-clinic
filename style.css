@@ -2317,4 +2317,43 @@ h4 { font-size: 1.05rem; }
 
         max-width: calc(100% - 28px);
     }
+/* ===== MOBILE REELS FIX ===== */
+@media (max-width: 760px) {
+
+    .reel-carousel {
+        display: grid !important;
+        grid-template-columns: none !important;
+        grid-auto-flow: column !important;
+        grid-auto-columns: 86% !important;
+
+        width: auto !important;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        
+        gap: 16px !important;
+
+        margin-left: -14px !important;
+        margin-right: -14px !important;
+
+        padding: 8px 14px 12px !important;
+
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .reel-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .reel-carousel .reel-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        aspect-ratio: 9 / 16 !important;
+
+        scroll-snap-align: center;
+        border-radius: 22px;
+    }
+
+}
 }
